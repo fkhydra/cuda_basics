@@ -5,7 +5,7 @@
 
 int main()
 {
- int darabszam;
+ int devcount;
  int dev, driverVersion = 0, runtimeVersion = 0;
 
  cudaGetDeviceCount(&devcount);
