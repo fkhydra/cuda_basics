@@ -10,7 +10,7 @@ int main()
 
  cudaGetDeviceCount(&devcount);
  if (devcount == 0) printf("No supported CUDA device found!\n");
- else printf("%i CUDA device(s) fund...", devcount);
+ else printf("%i CUDA device(s) found...", devcount);
 
  for (dev = 0; dev < devcount; ++dev)
  {
@@ -37,6 +37,7 @@ int main()
    (unsigned long long)deviceProp.totalGlobalMem);
   printf("%s", msg);
 
+  //_ConvertSMVer2Cores needs cuda-samples to be installed
   printf("  (%2d) Multiprocessor, (%3d) CUDA cores/MP: %d CUDA cores\n",
    deviceProp.multiProcessorCount,
    _ConvertSMVer2Cores(deviceProp.major, deviceProp.minor),
